@@ -1,11 +1,19 @@
 // Criando um novo objeto da classe Promise e colocando o objeto na variavel promessa para tratar o fluxo de resposta.
 const promessa = new Promise((resolve, rejeita)=>{
 
-    let a = 2 + a;
+    let a = 2 + 2;
+    let b = 2 * 4
+    let c = 2 ** 4
 
+    // criando um objeto de resultado
+    const resultado ={
+        "a": a,
+        "b": b,
+        "c": c
+    }
     setTimeout(
-        () => resolve(a), 
-        3000
+        () => resolve(resultado), 
+        1000
     )
 })
 
@@ -13,8 +21,8 @@ const promessa = new Promise((resolve, rejeita)=>{
 
 promessa.
 then(
-    soma => {
-        console.log("Soma:", soma)
+    res => {
+        console.log("Resultado:", res)
     }
 ).catch(
     erro => {
